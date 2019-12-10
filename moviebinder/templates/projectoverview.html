@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>{{project.title}}:MovieBinder</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/projectoverview.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">MovieBinder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="/newproject/">New Project +</a>
+                    <a class="nav-item nav-link" href="/home/">Logout-></a>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img class="project-img" src="{{project.project_image.url}}">
+                    <br><br>
+                </div>
+                <div class="col">
+                    <h2>{{project.title}}</h2>
+                    <br>
+                    <h4 style="text-decoration : underline">{{project.company_name}}</h4>
+                    <br>
+                    <p>Created on {{project.created_on}}</p>
+                    <br>
+                    <p>{{project.description}}</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="card">
+                <a href="/allscripts/"><h4>View/Edit your Script</h4></a>
+            </div>
+            <br>
+            <div class="card">
+                <a href="/shotdivision/"><h4>View/Divide your Shots</h4></a>
+            </div>
+            <br>
+            <div class="card">
+                <a href="/schedule/"><h4>View/Plan Schedule</h4></a>
+            </div>
+        </div>
+    </body>
+</html>

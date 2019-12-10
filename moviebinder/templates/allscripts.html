@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Script:MovieBinder</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/allscripts.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">MovieBinder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="/addscript/">Add Script</a>
+                    <a class="nav-item nav-link" href="/home/">Logout-></a>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            {% for script in scripts %}
+            <a href="/script/{{script.id}}"><h2>{{script.script_title}}</h2></a>
+            <br>
+            <p>{{script.edited_on}}</p>
+            <br>
+            {% endfor %}
+        </div>
+    </body>
+</html>

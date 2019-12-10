@@ -1,0 +1,21 @@
+.card{
+    max-width: 300px;
+    max-height: 500px;
+    border-radius: 3%;
+}
+
+.project-img{
+    max-width: 300px;
+    max-height: 500px;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+}
+
+.project-container{
+    display: flex;
+}
+
+.main-container{
+    margin-left: 30px;
+    margin-right: 30px;
+}

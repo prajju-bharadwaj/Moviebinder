@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Create New Project:MovieBinder</title>
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">MovieBinder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="/home/">Logout-></a>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <div class="container">
+            <form action="/newproject/" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>Project Title</p>
+                <input type="text" name="title" class="form-control">
+                <br>
+                <p>Company Name</p>
+                <input type="text" name="company_name" class="form-control">
+                <br>
+                <p>Description</p>
+                <input type="textarea" name="description" class="form-control">
+                <br>
+                <p>Choose an image for the project</p>
+                <input type="file" name="project_image" accept="images/*"> 
+                <br><br>
+                <button type="submit" class="btn btn-success">Create Project</button>
+                <a href="/myprojects/"><button type="button" class="btn btn-danger">Cancel</button></a>
+            </form>
+        </div>
+    </body>
+</html>
